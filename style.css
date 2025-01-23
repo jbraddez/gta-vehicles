@@ -161,9 +161,15 @@ select {
     }
     #search{
         width: 100%;
+        margin-bottom: 10px;
     }
 
     select{
-        width: 50%;
+        color: #000;
+        background: #fefefe;
+        padding: 4px;
+        width: 40svw;
+        min-width: none;
+        max-width: none;
     }
 }
