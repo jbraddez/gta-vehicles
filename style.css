@@ -30,13 +30,13 @@ header h1 {
 .controls {
     display: flex;
     justify-content: flex-start;
-    gap: 10px;  /* Small gap between elements */
+    gap: 10px; 
     margin-bottom: 30px;
-    width: 100%;  /* Makes the controls span the full width of the row */
+    width: 100%; 
 }
 
 #search {
-    flex: 1;  /* Makes the search input take up the remaining space */
+    flex: 1; 
     padding: 12px;
     font-size: 16px;
     border: 1px solid #ddd;
@@ -49,14 +49,14 @@ select {
     font-size: 16px;
     border: 1px solid #ddd;
     border-radius: 5px;
-    width: 200px;  /* Fixed width for dropdowns */
+    width: 200px;  
     color: #000;
     background: #fefefe;
     outline: none;
 }
 
 #vehicle-type {
-    width: 180px;  /* Slightly smaller width for vehicle type dropdown */
+    width: 180px; 
 }
 
 #vehicle-list {
@@ -151,4 +151,19 @@ select {
 
 .stats-bar .bar {
     margin-bottom: 15px;
+}
+
+
+
+@media (max-width: 768px) {
+    .controls{
+        display: block;
+    }
+    #search{
+        width: 100%;
+    }
+
+    select{
+        width: 50%;
+    }
 }
