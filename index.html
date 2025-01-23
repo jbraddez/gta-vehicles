@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GTA Vehicle Stats</title>
+    <meta name="author" content="Jacob Bradley">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>GTA Vehicle Stats</h1>
+
+        <div class="controls">
+            <input type="text" id="search" placeholder="Search for a vehicle...">
+            <select id="vehicle-type">
+                <option value="all">All</option>
+            </select>
+            <select id="sort-options">
+                <option value="">Sort By</option>
+                <option value="speed-high">Speed (High to Low)</option>
+                <option value="speed-low">Speed (Low to High)</option>
+                <option value="handling-high">Handling (High to Low)</option>
+                <option value="handling-low">Handling (Low to High)</option>
+                <option value="price-high">Price (High to Low)</option>
+                <option value="price-low">Price (Low to High)</option>
+                <option value="acceleration-high">Acceleration (High to Low)</option>
+                <option value="acceleration-low">Acceleration (Low to High)</option>
+            </select>
+            
+        </div>
+    </header>
+
+    <div id="vehicle-list"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>

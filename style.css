@@ -1,0 +1,154 @@
+@import url('https://fonts.cdnfonts.com/css/pricedown');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f7f7f7;
+    color: #333;
+    padding: 20px;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+header h1 {
+    font-size: 36px;
+    font-weight: 700;
+    color: #333;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-family: 'Pricedown Bl', sans-serif;
+}
+
+.controls {
+    display: flex;
+    justify-content: flex-start;
+    gap: 10px;  /* Small gap between elements */
+    margin-bottom: 30px;
+    width: 100%;  /* Makes the controls span the full width of the row */
+}
+
+#search {
+    flex: 1;  /* Makes the search input take up the remaining space */
+    padding: 12px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    outline: none;
+}
+
+select {
+    padding: 12px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    width: 200px;  /* Fixed width for dropdowns */
+    color: #000;
+    background: #fefefe;
+    outline: none;
+}
+
+#vehicle-type {
+    width: 180px;  /* Slightly smaller width for vehicle type dropdown */
+}
+
+#vehicle-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.vehicle {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    cursor: pointer;
+    overflow: hidden;
+    position: relative;
+    height: fit-content;
+}
+
+.vehicle:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.vehicle h2 {
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.vehicle p {
+    font-size: 14px;
+    margin: 5px 0;
+    color: #555;
+}
+
+.vehicle img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-top: 15px;
+}
+
+.vehicle img:hover {
+    opacity: 0.85;
+}
+
+.vehicle.expanded {
+    transform: scale(1.05);
+    z-index: 10;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+    max-height: 1000px;
+    padding: 30px;
+}
+
+.stats-info {
+    display: none;
+}
+
+.vehicle.expanded .stats-info {
+    display: block;
+}
+
+.stats-bar {
+    margin-top: 20px;
+}
+
+.stats-bar div {
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+.stats-bar .stat-label {
+    font-weight: 500;
+    margin-bottom: 8px;
+}
+
+.bar {
+    height: 10px;
+    border-radius: 5px;
+    background-color: #ddd;
+}
+
+.bar-fill {
+    height: 100%;
+    border-radius: 5px;
+    background-color: #4caf50;
+    transition: width 0.3s;
+}
+
+.stats-bar .bar {
+    margin-bottom: 15px;
+}
